@@ -1,0 +1,26 @@
+.google-picker-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.google-picker:hover{
+  background-color: #8DAEF6;
+}
+
+.google-picker{
+  color: #2e2e2e;
+  background-color: #C4D5FA;
+  width: 50%;
+  height: 32px;
+  margin-top: 10px;
+}
+
+#google-body-input-title{
+  margin: 10px 0px;
+}
+
+#google-body-input{
+  background-color: #C4D5FA;
+}

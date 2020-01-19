@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html id="root">
+  <head>
+    <meta charset="UTF-8">
+    <title>Marble Fox Node Server Sandbox</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/google.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+  </head>
+  <body id="body">
+    <div id="header">
+      <div id="logo-container">
+        <img id="logo" src="img/marble_fox_studios-logo_dark.svg" alt="Marble Fox Studios" height="32px"/>
+      </div>
+      <div id="app-title-container">
+        <span id="app-title">Node Server</span>
+      </div>
+      <div id="menu-icon-container">
+        <img id="menu-icon" src="img/marble_fox_studios-hamburger_menu_light.svg" alt="Menu" height="32px">
+      </div>
+    </div>
+    <div id="menu-container" hidden="true"></div>
+    <div id="input-container">
+      <div id="input-title-container"></div>
+      <div id="input-body-container"></div>
+    </div>
+    <div id="http-btn-container" hidden>
+      <button hidden class="http-btn" value="POST" id="create-btn">Create</button>
+      <button hidden class="http-btn" value="GET" id="read-btn">Read</button>
+      <button hidden class="http-btn" value="PUT" id="update-btn">Update</button>
+      <button hidden class="http-btn" value="DELETE" id="delete-btn">Delete</button>
+    </div>
+    <div id="message-container" hidden>
+      <div id="message-title" hidden>Responses from the API will appear below.</div>
+      <div id="message-body" hidden></div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="views/google.js" type="application/javascript"></script>
+  <script src="views/home.js" type="application/javascript"></script>
+  <script src="views/index.js" type="application/javascript"></script>
+  <script src="index.js" type="application/javascript"></script>
+</html>
