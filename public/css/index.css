@@ -34,7 +34,6 @@
 }
 
 #app-title{
-  color: #828282;
   font-weight: 900;
 }
 
@@ -53,7 +52,7 @@
 }
 
 #menu-btn{
-  color: #828282;
+  font-weight: 900;
   padding-left: 15px;
   padding-right: 14px;
   padding-bottom: 8px;
