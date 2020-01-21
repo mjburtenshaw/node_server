@@ -1,4 +1,5 @@
 function loadHome() {
+  state = { view: 'home' };
   const inputTitleContainer = document.getElementById('input-title-container');
   const inputBodyContainer = document.getElementById('input-body-container');
   const httpBtnContainer = document.getElementById('http-btn-container');
