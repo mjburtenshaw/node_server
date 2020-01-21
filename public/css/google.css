@@ -10,8 +10,8 @@
 }
 
 .google-picker{
-  color: #2e2e2e;
-  background-color: #C4D5FA;
+  color: #080808;
+  background-color: #D4E0FC;
   width: 50%;
   height: 32px;
   margin-top: 10px;
@@ -22,5 +22,5 @@
 }
 
 #google-body-input{
-  background-color: #C4D5FA;
+  background-color: #D4E0FC;
 }

@@ -1,6 +1,6 @@
 #body{
-  background-color: #212121;
-  color: #F9FDFF;
+  background-color: #151515;
+  color: #FDFDFD;
   margin: 0px;
   font-family: 'Lato', sans-serif;
   display: flex;
@@ -10,12 +10,12 @@
 
 #header{
   position: fixed;
-  background-color: #2e2e2e;
+  background-color: #080808;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: solid #0d0d0d 3px;
+  border-bottom: solid #000000 3px;
 }
 
 #logo-container{
@@ -29,19 +29,43 @@
 }
 
 #app-title-container{
-  margin-right: 125px;
+  position: fixed;
+  margin-left: 46.5%;
 }
 
 #app-title{
+  color: #828282;
   font-weight: 900;
 }
 
+#menu-btn:hover{
+  color: #8DE2F6;
+  border-bottom-style: solid;
+  border-bottom-color: #D4E0FC;
+}
+
+#menu-btn:active{
+  color: #8DAEF6;
+}
+
+.clicked{
+  color: #8DE2F6;
+}
+
+#menu-btn{
+  color: #828282;
+  padding-left: 15px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+}
+
 #menu-container{
+  background-color: #080808;
   position: fixed;
-  top: 38px;
+  top: 33px;
   right: 0px;
-  border-style: solid;
-  border-color: #bbbbbb;
+  border-top-style: solid;
+  border-top-color: #8DE2F6;
   border-width: 3px;
   padding: 10px;
 }
@@ -55,7 +79,7 @@
 }
 
 .menu-link{
-  color: #C4F0FA;
+  color: #D4E0FC;
 }
 
 .api-link{
@@ -96,7 +120,7 @@
 }
 
 .http-btn:disabled{
-  background-color: #585858;
+  background-color: #828282;
 }
 
 .http-btn:active{
@@ -106,11 +130,11 @@
 .http-btn{
   height: 32px;
   width: 64px;
-  background-color: #C4F0FA;
-  color: #2e2e2e;
+  background-color: #D4F4FC;
+  color: #080808;
   font-weight: 900;
   border-style: solid;
-  border-color: #0d0d0d;
+  border-color: #000000;
   border-width: 1px;
   border-radius: 5px;
 }

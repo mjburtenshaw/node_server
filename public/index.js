@@ -26,14 +26,19 @@ async function populateMenu() {
   menuContainer.innerHTML = menu;
 };
 
-function toggleMenuView(event) {
+function toggleMenuView({ event, caller }) {
+  event.stopPropagation();
+  const menuBtn = document.getElementById('menu-btn');
   const menuContainer = document.getElementById('menu-container');
-  menuContainer.hidden = !menuContainer.hidden;
+  if (caller === 'body' && menuContainer.hidden) return;
+  else menuContainer.hidden = !menuContainer.hidden;
+  if (menuContainer.hidden) menuBtn.classList.remove('clicked');
+  else menuBtn.classList.add('clicked');
 };
 
-function toggleApiView(event) {
+function toggleApiView({ event, caller }) {
   const view = event.target.getAttribute('value');
-  toggleMenuView();
+  toggleMenuView({ event, caller });
   state.view = view;
   views[view].load();
   localStorage.setItem('view', view);
@@ -68,12 +73,14 @@ async function handleHttpRequest(event) {
 };
 
 function assignEventHandlers() {
-  const menuIcon = document.getElementById('menu-icon-container');
+  const body = document.getElementById('body');
+  const menuBtn = document.getElementById('menu-btn');
   const apiLinks = document.getElementsByClassName('menu-link');
   const httpButtons = document.getElementsByClassName('http-btn');
   for (let httpButton of httpButtons) httpButton.addEventListener('click', handleHttpRequest);
-  menuIcon.addEventListener('click', toggleMenuView);
-  for (let apiLink of apiLinks) apiLink.addEventListener('click', toggleApiView);
+  body.addEventListener('click', event => toggleMenuView({ event, caller: body.id }));
+  menuBtn.addEventListener('click', event => toggleMenuView({ event, caller: menuBtn.id }));
+  for (let apiLink of apiLinks) apiLink.addEventListener('click', event => toggleApiView({ event, caller: apiLink.id}));
 };
 
 async function initLoad() {
